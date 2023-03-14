@@ -1,0 +1,48 @@
+{{flexberry-simpledatetime
+    type="date"
+    readonly=readonly
+    value=meetingDate
+    class=(if (v-get validationModel "date" "isInvalid") "error")
+    data-test-i-i-s-book-club-2-1-meeting-e-date=true
+}}
+
+<table class="table-data">
+    <thead>
+        <th>Спикер</th>
+        <th>Книга</th>
+        <th>Автор</th>
+    </thead>
+    <tbody>
+        {{#each presentations as |presentation|}}
+        <tr>
+            <td>
+                {{flexberry-textbox
+                    value=presentation._record.speaker.fullName
+                    placeholder=placeholder
+                    readonly=true
+                    class=class
+                    maxlength=maxlength
+                }}
+            </td>
+            <td>
+                {{flexberry-textbox
+                    value=presentation._record.book.title
+                    placeholder=placeholder
+                    readonly=true
+                    class=class
+                    maxlength=maxlength
+                }}
+            </td>
+            <td>
+                {{flexberry-textbox
+                    value=presentation._record.book.author
+                    placeholder=placeholder
+                    readonly=true
+                    class=class
+                    maxlength=maxlength
+                }}
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

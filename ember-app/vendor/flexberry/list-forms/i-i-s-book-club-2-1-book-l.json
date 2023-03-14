@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-book-club-2-1-book-e",
+  "editForm": "i-i-s-book-club-2-1-book-e",
+  "external": false,
+  "caption": "Книга",
+  "name": "IISBookClub_2_1BookL",
+  "className": "BookL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-2-1-book",
+      "modelProjection": "BookL"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookClub_2_1.Objects</name>
+    </assembly>
+    <members>
+        <member name="T:IIS.BookClub_2_1.Book">
+            <summary>
+            Book.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Title">
+            <summary>
+            Title.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Author">
+            <summary>
+            Author.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Pages">
+            <summary>
+            Pages.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Cover">
+            <summary>
+            Cover.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Tags">
+            <summary>
+            Tags.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Description">
+            <summary>
+            Description.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Rating">
+            <summary>
+            Rating.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Book.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Views.BookE">
+            <summary>
+            "BookE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Book.Views.BookL">
+            <summary>
+            "BookL" view.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Meeting">
+            <summary>
+            Meeting.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Meeting.Date">
+            <summary>
+            Date.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Meeting.Presentation">
+            <summary>
+            Meeting.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Meeting.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Meeting.Views.MeetingE">
+            <summary>
+            "MeetingE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Meeting.Views.MeetingL">
+            <summary>
+            "MeetingL" view.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.ObjectsMarker">
+            <summary>
+            Class for determinate objects assembly in DI.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Presentation">
+            <summary>
+            Доклада описание.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Date">
+            <summary>
+            Date.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Rating">
+            <summary>
+            Rating.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.UrlPresentation">
+            <summary>
+            UrlPresentation.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.UrlVideo">
+            <summary>
+            UrlVideo.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Review">
+            <summary>
+            Review.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Book">
+            <summary>
+            Доклада описание.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Speaker">
+            <summary>
+            Доклада описание.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Meeting">
+            <summary>
+            мастеровая ссылка на шапку IIS.BookClub_2_1.Meeting.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Presentation.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Views.PresentationBook">
+            <summary>
+            "PresentationBook" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Views.PresentationE">
+            <summary>
+            "PresentationE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Views.PresentationMeeting">
+            <summary>
+            "PresentationMeeting" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Presentation.Views.PresentationSpeaker">
+            <summary>
+            "PresentationSpeaker" view.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.DetailArrayOfPresentation">
+            <summary>
+            Detail array of Presentation.
+            </summary>
+        </member>
+        <member name="M:IIS.BookClub_2_1.DetailArrayOfPresentation.#ctor(IIS.BookClub_2_1.Meeting)">
+            <summary>
+            Construct detail array.
+            </summary>
+            <summary>
+            Returns object with type Presentation by index.
+            </summary>
+            <summary>
+            Adds object with type Presentation.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Speaker">
+            <summary>
+            Speaker.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.FirstName">
+            <summary>
+            FirstName.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.LastName">
+            <summary>
+            LastName.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.MiddleName">
+            <summary>
+            MiddleName.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.Foto">
+            <summary>
+            Foto.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.fullName">
+            <summary>
+            fullName.
+            </summary>
+        </member>
+        <member name="T:IIS.BookClub_2_1.Speaker.Views">
+            <summary>
+            Class views container.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.Views.SpeakerE">
+            <summary>
+            "SpeakerE" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.Views.SpeakerFull">
+            <summary>
+            "SpeakerFull" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.Views.SpeakerFullShort">
+            <summary>
+            "SpeakerFullShort" view.
+            </summary>
+        </member>
+        <member name="P:IIS.BookClub_2_1.Speaker.Views.SpeakerL">
+            <summary>
+            "SpeakerL" view.
+            </summary>
+        </member>
+    </members>
+</doc>

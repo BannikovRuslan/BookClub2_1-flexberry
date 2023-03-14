@@ -1,0 +1,396 @@
+﻿{
+  "name": "IISBookClub_2_1Presentation",
+  "modelName": "i-i-s-book-club-2-1-presentation",
+  "className": "Presentation",
+  "nameSpace": "IIS.BookClub_2_1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "rating",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "urlPresentation",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "urlVideo",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "review",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "speaker",
+      "relatedTo": "i-i-s-book-club-2-1-speaker",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "book",
+      "relatedTo": "i-i-s-book-club-2-1-book",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "meeting",
+      "relatedTo": "i-i-s-book-club-2-1-meeting",
+      "inverse": "presentation"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PresentationBook",
+      "modelName": "i-i-s-book-club-2-1-presentation",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Speaker",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "lastName",
+              "caption": "Фамилия",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "firstName",
+              "caption": "Имя",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "middleName",
+              "caption": "Отчество",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Фамилия",
+          "name": "speaker",
+          "relatedTo": "i-i-s-book-club-2-1-speaker",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Meeting",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "date",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "",
+          "name": "meeting",
+          "relatedTo": "i-i-s-book-club-2-1-meeting",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "PresentationE",
+      "modelName": "i-i-s-book-club-2-1-presentation",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата Доклада",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "rating",
+          "caption": "Оценка книги",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "urlPresentation",
+          "caption": "Презентация (url)",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "urlVideo",
+          "caption": "Видео (url)",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "review",
+          "caption": "Рецензия",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "fullName",
+          "lookupValueField": "fullName",
+          "relationName": "Speaker",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "firstName",
+              "caption": "~",
+              "hidden": true,
+              "index": 6
+            },
+            {
+              "name": "middleName",
+              "caption": "~",
+              "hidden": true,
+              "index": 7
+            },
+            {
+              "name": "lastName",
+              "caption": "~",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Спикер",
+          "name": "speaker",
+          "relatedTo": "i-i-s-book-club-2-1-speaker",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Title",
+          "lookupValueField": "title",
+          "relationName": "Book",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "title",
+              "caption": "~",
+              "hidden": true,
+              "index": 10
+            }
+          ],
+          "index": 9,
+          "type": "standard",
+          "caption": "Книга",
+          "name": "book",
+          "relatedTo": "i-i-s-book-club-2-1-book",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "PresentationMeeting",
+      "modelName": "i-i-s-book-club-2-1-presentation",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Speaker",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "fullName",
+              "caption": "Спикер",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "firstName",
+              "caption": "~",
+              "hidden": true,
+              "index": 4
+            },
+            {
+              "name": "lastName",
+              "caption": "~",
+              "hidden": true,
+              "index": 5
+            },
+            {
+              "name": "middleName",
+              "caption": "~",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Спикер",
+          "name": "speaker",
+          "relatedTo": "i-i-s-book-club-2-1-speaker",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Book",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "title",
+              "caption": "Книга",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "author",
+              "caption": "Автор",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Книга",
+          "name": "book",
+          "relatedTo": "i-i-s-book-club-2-1-book",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "PresentationSpeaker",
+      "modelName": "i-i-s-book-club-2-1-presentation",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата выступления",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Book",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "title",
+              "caption": "Заголовок",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "author",
+              "caption": "Автор",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "description",
+              "caption": "Описание / ссылка",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Заголовок",
+          "name": "book",
+          "relatedTo": "i-i-s-book-club-2-1-book",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Meeting",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [
+            {
+              "name": "date",
+              "caption": "",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "",
+          "name": "meeting",
+          "relatedTo": "i-i-s-book-club-2-1-meeting",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

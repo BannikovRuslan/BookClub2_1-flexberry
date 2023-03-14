@@ -1,0 +1,28 @@
+﻿{
+  "applicationCaption": "Книжный клуб",
+  "applicationTitle": "Книжного клуба описание",
+  "items": [
+    {
+      "link": "i-i-s-book-club-2-1-book-l",
+	  "menuName": null,
+	  "caption": "Книги",
+	  "title": "",
+	  "children": null
+    },
+    {
+      "link": "i-i-s-book-club-2-1-speaker-l",
+	  "menuName": null,
+	  "caption": "Спикеры",
+	  "title": "",
+	  "children": null
+    },
+    {
+      "link": "i-i-s-book-club-2-1-meeting-l",
+	  "menuName": null,
+	  "caption": "Встречи",
+	  "title": "",
+	  "children": null
+    }
+  ],
+  "mobile": true
+}

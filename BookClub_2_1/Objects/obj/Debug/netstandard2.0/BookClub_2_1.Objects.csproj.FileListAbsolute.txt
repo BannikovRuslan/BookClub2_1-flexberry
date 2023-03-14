@@ -1,0 +1,11 @@
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\bin\Debug\netstandard2.0\BookClub_2_1.Objects.xml
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\bin\Debug\netstandard2.0\BookClub_2_1.Objects.deps.json
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\bin\Debug\netstandard2.0\BookClub_2_1.Objects.dll
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\bin\Debug\netstandard2.0\BookClub_2_1.Objects.pdb
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.csproj.AssemblyReference.cache
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.GeneratedMSBuildEditorConfig.editorconfig
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.AssemblyInfoInputs.cache
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.AssemblyInfo.cs
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.csproj.CoreCompileInputs.cache
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.dll
+D:\FlexberryDesigner\NewGen\CodeGen\BookClub2_1\BookClub_2_1\Objects\obj\Debug\netstandard2.0\BookClub_2_1.Objects.pdb

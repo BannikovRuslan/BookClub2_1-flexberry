@@ -1,0 +1,68 @@
+﻿{
+  "name": "IISBookClub_2_1Meeting",
+  "modelName": "i-i-s-book-club-2-1-meeting",
+  "className": "Meeting",
+  "nameSpace": "IIS.BookClub_2_1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "presentation",
+      "relatedTo": "i-i-s-book-club-2-1-presentation",
+      "inverse": "meeting"
+    }
+  ],
+  "projections": [
+    {
+      "name": "MeetingE",
+      "modelName": "i-i-s-book-club-2-1-meeting",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата Встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "PresentationE",
+          "caption": "Presentation",
+          "name": "presentation",
+          "relatedTo": "i-i-s-book-club-2-1-presentation",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "MeetingL",
+      "modelName": "i-i-s-book-club-2-1-meeting",
+      "attrs": [
+        {
+          "name": "date",
+          "caption": "Дата Встречи",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

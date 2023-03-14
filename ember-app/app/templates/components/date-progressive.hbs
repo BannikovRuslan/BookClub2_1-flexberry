@@ -1,0 +1,26 @@
+{{#if (and currentTypeSupported useBrowserInput)}}
+  {{input type=type readonly=readonlyAttr value=_valueAsString min=_minAsString max=_maxAsString placeholder=placeholder change=(action "onChange")}}
+{{else}}
+  <div class="ui fluid action input flatpickr">
+    <input type="text" placeholder={{placeholder}} onchange={{action "onChange"}}/>
+    {{#if openButton}}
+      <button
+        class="ui ui-open {{if readonlyAttr "disabled"}} button"
+        title={{t "components.flexberry-lookup.choose-button-text"}}
+        disabled={{readonlyAttr}}
+        type="button">
+        <i class="date icon"></i>
+      </button>
+    {{/if}}
+    {{#if removeButton}}
+      <button
+        class="ui ui-clear {{if readonlyAttr "disabled"}} button"
+        title={{t "components.flexberry-lookup.remove-button-text"}}
+        disabled={{readonlyAttr}}
+        type="button"
+        {{action "remove" bubbles=false}}>
+        <i class="remove icon"></i>
+      </button>
+    {{/if}}
+  </div>
+{{/if}}

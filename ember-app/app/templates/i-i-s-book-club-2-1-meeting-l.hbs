@@ -1,0 +1,104 @@
+{{flexberry-error error=error}}
+<h3>{{t "forms.i-i-s-book-club-2-1-meeting-l.caption"}}</h3>
+<div class="row">
+
+<table class="table-search">
+  <thead>
+    <th>Дата</th>
+    <th>Спикер</th>
+    <th>Книга</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        {{flexberry-simpledatetime
+          type="date"
+          readonly=readonly
+          value=searchMeetingDate
+          removeButton=false
+          class=(if (v-get validationModel "date" "isInvalid") "error")
+          data-test-i-i-s-book-club-2-1-meeting-e-date=true
+        }}
+      </td>      
+      <td>
+        {{flexberry-textbox
+          value=searchSpeaker
+          placeholder=placeholder
+          readonly=readonly
+          class=class
+          maxlength=maxlength
+        }}  
+      </td>
+      <td>
+        {{flexberry-textbox
+          value=searchBook
+          placeholder=placeholder
+          readonly=readonly
+          class=class
+          maxlength=maxlength
+        }}  
+      </td>
+      <td>
+        {{flexberry-button
+          class=class
+          iconClass=class
+          caption="Найти"
+          tooltip=tooltip
+          readonly=readonly
+          click=(action "onFilterButtonClick")
+        }}
+      </td>
+      <td>
+        {{flexberry-button
+          class=class
+          iconClass=class
+          caption="Очистить"
+          tooltip=tooltip
+          readonly=readonly
+          click=(action "onClearFilterButtonClick")
+        }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="row">
+  {{flexberry-objectlistview
+    modelName=modelName
+    modelProjection=modelProjection
+    editFormRoute=editFormRoute
+    content=content
+    createNewButton=true
+    refreshButton=true
+    sorting=computedSorting
+    orderable=true
+    showCheckBoxInRow=true
+    sortByColumn=(action "sortByColumn")
+    addColumnToSorting=(action "addColumnToSorting")
+    beforeDeleteAllRecords=(action "beforeDeleteAllRecords")
+    
+    pages=pages
+    perPageValue=perPageValue
+    perPageValues=perPageValues
+    recordsTotalCount=recordsTotalCount
+    hasPreviousPage=hasPreviousPage
+    hasNextPage=hasNextPage
+    previousPage=(action "previousPage")
+    gotoPage=(action "gotoPage")
+    nextPage=(action "nextPage")
+    
+    componentName="IISBookClub_2_1MeetingL"
+    deleteButton=true
+    exportExcelButton=false
+    enableFilters=false
+    filterButton=false
+    showDeleteButtonInRow=true
+    showPrototypeButtonInRow=false
+    showEditButtonInRow=true
+    showFiltersInModal=false
+
+    colsConfigButton=false
+    deleteRow=(action "deleteRow")
+  }}
+</div>

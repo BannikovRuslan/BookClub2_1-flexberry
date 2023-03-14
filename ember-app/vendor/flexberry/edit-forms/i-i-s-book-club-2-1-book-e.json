@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Книга",
+  "name": "IISBookClub_2_1BookE",
+  "className": "BookE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-2-1-book",
+      "modelProjection": "BookE"
+    }
+  ]
+}

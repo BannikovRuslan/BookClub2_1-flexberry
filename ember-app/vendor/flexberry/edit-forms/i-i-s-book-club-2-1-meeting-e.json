@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "speaker",
+      "displayAttributeName": "fullName",
+      "required": true,
+      "relationName": "Presentation.Speaker",
+      "projection": "SpeakerL",
+      "detailModelName": "i-i-s-book-club-2-1-presentation"
+    },
+    {
+      "master": "book",
+      "displayAttributeName": "title",
+      "required": true,
+      "relationName": "Presentation.Book",
+      "projection": "BookL",
+      "detailModelName": "i-i-s-book-club-2-1-presentation"
+    }
+  ],
+  "external": false,
+  "caption": "Встреча",
+  "name": "IISBookClub_2_1MeetingE",
+  "className": "MeetingE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-book-club-2-1-meeting",
+      "modelProjection": "MeetingE"
+    }
+  ]
+}

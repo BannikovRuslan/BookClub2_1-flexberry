@@ -1,0 +1,116 @@
+<h3 class="ui header">{{t "forms.i-i-s-book-club-2-1-speaker-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-book-club-2-1-speaker-e.foto-caption"}}</label>
+    {{flexberry-file
+
+      showPreview=true
+      accept='image/jpeg, image/gif, image/webp, image/jpg'
+
+      readonly=readonly
+      value=model.foto
+      class=(if (v-get validationModel "foto" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-2-1-speaker-e.foto-caption")
+      data-test-i-i-s-book-club-2-1-speaker-e-foto=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "foto" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.lastName
+      class=(if (v-get validationModel "lastName" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-2-1-speaker-e.lastName-caption")
+      data-test-i-i-s-book-club-2-1-speaker-e-lastName=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "lastName" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.firstName
+      class=(if (v-get validationModel "firstName" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-2-1-speaker-e.firstName-caption")
+      data-test-i-i-s-book-club-2-1-speaker-e-firstName=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "firstName" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.middleName
+      class=(if (v-get validationModel "middleName" "isInvalid") "error")
+      label=(t "forms.i-i-s-book-club-2-1-speaker-e.middleName-caption")
+      data-test-i-i-s-book-club-2-1-speaker-e-middleName=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "middleName" "message")}}
+  </div>
+</form>
+
+
+<div class="row">
+  <div class="ui segment">
+  {{#flexberry-toggler
+    caption=(t "forms.i-i-s-book-club-2-1-meeting-l.caption")
+    expanded=false
+  }}
+    <div class="field">
+    {{#with multiListSettings.olvSpeakerMeetings as |settings|}}
+      {{flexberry-objectlistview
+        modelName=settings.modelName
+        modelProjection=settings.projectionName
+        editFormRoute=settings.editFormRoute
+        content=settings.model
+        
+        createNewButton=true
+        refreshButton=true
+        orderable=true
+        sorting=settings.computedSorting
+        sortByColumn=(action "sortByColumn")
+        addColumnToSorting=(action "addColumnToSorting")
+        beforeDeleteAllRecords=(action "beforeDeleteAllRecords")
+        pages=settings.pages
+        perPageValue=settings.perPageValue
+        perPageValues=settings.perPageValues
+        recordsTotalCount=settings.recordsTotalCount
+        hasPreviousPage=settings.hasPreviousPage
+        hasNextPage=settings.hasNextPage
+        previousPage=(action "previousPage")
+        gotoPage=(action "gotoPage")
+        nextPage=(action "nextPage")
+        componentName=settings.componentName
+
+        action = "rowClick"
+        rowClickable = true
+        
+      }}
+    {{/with}}
+
+    </div>
+  {{/flexberry-toggler}}
+  </div>
+</div>

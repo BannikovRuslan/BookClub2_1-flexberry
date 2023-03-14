@@ -1,0 +1,28 @@
+.hide-component {
+    display: none !important;
+}
+
+.back
+
+.header-type1 {
+    width: auto;
+    font-weight: bolder !important;
+}
+
+.table-data {
+    width: 100%;
+}
+
+.table-data td {
+    background-color: none !important; 
+}
+
+.table-search td:nth-child(1), 
+.table-search td:nth-child(2), 
+.table-search td:nth-child(3) {
+    width: 200px;
+}
+
+.table-search td > div {
+    width: 100%;
+}

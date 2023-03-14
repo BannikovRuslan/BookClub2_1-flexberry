@@ -1,0 +1,184 @@
+﻿{
+  "name": "IISBookClub_2_1Speaker",
+  "modelName": "i-i-s-book-club-2-1-speaker",
+  "className": "Speaker",
+  "nameSpace": "IIS.BookClub_2_1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "firstName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "lastName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "foto",
+      "type": "file",
+      "flexberryType": "WebFile",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "fullName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": false,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "SpeakerE",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "foto",
+          "caption": "Фотография",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "firstName",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "SpeakerFull",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "foto",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "firstName",
+          "caption": "",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "middleName",
+          "caption": "",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "fullName",
+          "caption": "",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "SpeakerFullShort",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "foto",
+          "caption": "",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "fullName",
+          "caption": "",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "SpeakerL",
+      "modelName": "i-i-s-book-club-2-1-speaker",
+      "attrs": [
+        {
+          "name": "foto",
+          "caption": "Фотография",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "lastName",
+          "caption": "Фамилия",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "firstName",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "middleName",
+          "caption": "Отчество",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,180 @@
+﻿{
+  "name": "IISBookClub_2_1Book",
+  "modelName": "i-i-s-book-club-2-1-book",
+  "className": "Book",
+  "nameSpace": "IIS.BookClub_2_1",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "title",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "author",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "pages",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "cover",
+      "type": "file",
+      "flexberryType": "WebFile",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "tags",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "rating",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "BookE",
+      "modelName": "i-i-s-book-club-2-1-book",
+      "attrs": [
+        {
+          "name": "title",
+          "caption": "Заголовок",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "author",
+          "caption": "Автор",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "pages",
+          "caption": "Количество страниц",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "cover",
+          "caption": "Обложка",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "tags",
+          "caption": "Теги",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "description",
+          "caption": "Описание (url)",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "rating",
+          "caption": "Средняя оценка",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "BookL",
+      "modelName": "i-i-s-book-club-2-1-book",
+      "attrs": [
+        {
+          "name": "title",
+          "caption": "Заголовок",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "author",
+          "caption": "Автор",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "pages",
+          "caption": "Количество страниц",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "cover",
+          "caption": "Обложка",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "tags",
+          "caption": "Теги",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "description",
+          "caption": "Описание",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "rating",
+          "caption": "Средняя оценка",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
