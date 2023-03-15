@@ -1,11 +1,10 @@
 import ListFormController from 'ember-flexberry/controllers/list-form';
 
 import FilterOperator from 'ember-flexberry-data/query/filter-operator';
-import { StringPredicate, ComplexPredicate, DetailPredicate, SimplePredicate, DatePredicate } from 'ember-flexberry-data/query/predicate';
+import { StringPredicate, ComplexPredicate, DetailPredicate, DatePredicate } from 'ember-flexberry-data/query/predicate';
 import Condition from 'ember-flexberry-data/query/condition';
 
 import Builder from 'ember-flexberry-data/query/builder';
-import { computed } from '@ember/object';
 
 export default ListFormController.extend( {
   /**
@@ -27,40 +26,14 @@ export default ListFormController.extend( {
     {
       return cellComponent;
     }
- 
-    let modelName = "i-i-s-book-club-2-1-meeting";
-    let modelProjection = "MeetingL";
- 
-    this.set('developerUserSettings', {IISBookClub_2_1MeetingL: {
-      "DEFAULT": {
-        "columnWidths": [
-          {
-            "propName": "OlvRowToolbar",
-            "width": 150
-          }
-        ]
-      }
-    }});
     
     cellComponent.componentName = "meeting-item";
-    // cellComponent.componentProperties = {
-    //   modelName: modelName,
-    //   modelProjection: modelProjection,
-    //   content: this.content,
-    //   cellComponent: {componentName: "meeting-item"}
-    // }
 
     return cellComponent;
   },
-
+  
   actions: {
-    deleteRow(row, x, y) {
-      console.log(row);
-    },
-
     async onFilterButtonClick() {
-      // let t = new Builder(this.store).from(this.modelName).count();
-      // let total = await this.store.query(this.modelName, t.build());
 
       let date = this.searchMeetingDate;
       let speaker = this.searchSpeaker;
@@ -76,7 +49,7 @@ export default ListFormController.extend( {
         const spFirstName = new StringPredicate('speaker.firstName').contains(speaker);
         const spLastName = new StringPredicate('speaker.lastName').contains(speaker);
         const spMiddleName = new StringPredicate('speaker.middleName').contains(speaker);
-        speakerPredicate = new DetailPredicate('presentation').all(new ComplexPredicate(Condition.Or, spFirstName, spLastName, spMiddleName));
+        speakerPredicate = new DetailPredicate('presentation').any(new ComplexPredicate(Condition.Or, spFirstName, spLastName, spMiddleName));
         if (mainPredicate) {
           mainPredicate = new ComplexPredicate(Condition.And, mainPredicate, speakerPredicate);
         }
@@ -87,7 +60,7 @@ export default ListFormController.extend( {
 
       let bookPredicate = null;
       if (book) {
-        bookPredicate = new DetailPredicate('presentation').all(new StringPredicate('book.title').contains(book));
+        bookPredicate = new DetailPredicate('presentation').any(new StringPredicate('book.title').contains(book));
         if (mainPredicate) {
           mainPredicate = new ComplexPredicate(Condition.And, mainPredicate, bookPredicate);
         } 

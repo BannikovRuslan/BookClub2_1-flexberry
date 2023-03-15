@@ -6,43 +6,47 @@
     data-test-i-i-s-book-club-2-1-meeting-e-date=true
 }}
 
-<table class="table-data">
-    <thead>
-        <th>Спикер</th>
-        <th>Книга</th>
-        <th>Автор</th>
-    </thead>
-    <tbody>
-        {{#each presentations as |presentation|}}
-        <tr>
-            <td>
-                {{flexberry-textbox
-                    value=presentation._record.speaker.fullName
-                    placeholder=placeholder
-                    readonly=true
-                    class=class
-                    maxlength=maxlength
-                }}
-            </td>
-            <td>
-                {{flexberry-textbox
-                    value=presentation._record.book.title
-                    placeholder=placeholder
-                    readonly=true
-                    class=class
-                    maxlength=maxlength
-                }}
-            </td>
-            <td>
-                {{flexberry-textbox
-                    value=presentation._record.book.author
-                    placeholder=placeholder
-                    readonly=true
-                    class=class
-                    maxlength=maxlength
-                }}
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>
+<div class="table-data">
+    <div>
+        <div>
+            Спикер
+        </div>
+        <div>
+            Книга
+        </div>
+        <div>
+            Автор
+        </div>
+    </div>
+    {{#each presentations as |presentation|}}
+    <div>
+        <div>
+        {{flexberry-field
+            value=presentation.speakerFullName
+            placeholder=placeholder
+            readonly=true
+            class=class
+            maxlength=maxlength
+        }}
+        </div>
+        <div>
+        {{flexberry-textbox
+            value=presentation.bookTitle
+            placeholder=placeholder
+            readonly=true
+            class=class
+            maxlength=maxlength
+        }}
+        </div>
+        <div>
+        {{flexberry-textbox
+            value=presentation.bookAuthor
+            placeholder=placeholder
+            readonly=true
+            class=class
+            maxlength=maxlength
+        }}
+        </div>
+    </div>
+    {{/each}}
+</div>

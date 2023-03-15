@@ -47,25 +47,10 @@ export default EditFormController.extend({
                   cellComponent = defaultFotoComponent;
                 }
                 return cellComponent;
-              };
-              
-              // this.lookupController.developerUserSettings = function() {
-              //   return { IISBookClub_2_1BookL: {
-              //     "DEFAULT": {
-              //       "columnWidths": [
-              //         {
-              //           "propName": "OlvRowToolbar",
-              //           "width": 200
-              //         },
-              //       ],
-              //     }
-              //   } }
-              // };
-                          
+              };                          
             }
           };
           break;
-
       }
     }
 

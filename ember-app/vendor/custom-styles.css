@@ -10,12 +10,29 @@
 }
 
 .table-data {
+    margin-top: 10px;
     width: 100%;
+    border: 1px solid rgba(34, 36, 38, 0.1);
 }
 
-.table-data td {
-    background-color: none !important; 
+.table-data > div {
+    background-color: none !important;
+    color: #848E99; 
+    font-weight: bold;
+    display: flex;
 }
+.table-data > div > div {
+    flex: 1;
+    padding: 5px 10px;
+} 
+
+.table-data > div:nth-child(1) {
+    border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+}
+.table-data > div:nth-child(2n+3) {
+    background-color: #ECF2FB;
+}
+
 
 .table-search td:nth-child(1), 
 .table-search td:nth-child(2), 
